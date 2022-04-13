@@ -17,6 +17,7 @@ namespace Queue
             queue.Enqueue("інформаційних");
             queue.Enqueue("технологій");
 
+
             foreach (var item in queue)
             { Console.WriteLine(item); }
 

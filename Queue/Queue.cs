@@ -39,12 +39,14 @@ namespace Queue
 
         public T Dequeue()
         {
+            if (IsEmpty)
+            { throw new InvalidOperationException("Черга порожня."); }
             // Видалення елементу із початку списку.
             T component = first.item;
             first = first.next;
+            count--;
             if (IsEmpty)
             { last = null; }
-            count--;
             return component;
         }
 
